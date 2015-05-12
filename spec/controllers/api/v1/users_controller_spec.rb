@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 describe Api::V1::UsersController, type: :controller do
-  before(:each) { request.headers['Accept'] = "application/vnd.bazaar.v1, #{Mime::JSON}" }
-  before(:each) { request.headers['Content-Type'] = Mime::JSON.to_s }
 
   describe "GET #SHOW" do
     before(:each) do

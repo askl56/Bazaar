@@ -30,6 +30,10 @@ RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include Request::JsonHelpers, :type => :controller
 
+  config.before(:each, type: :controller) do
+    include_default_accept_headers
+  end
+
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
