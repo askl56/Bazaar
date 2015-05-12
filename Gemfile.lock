@@ -162,6 +162,8 @@ GEM
     rdoc (4.2.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rspec-collection_matchers (1.0.0)
+      rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.2.3)
       rspec-support (~> 3.2.0)
     rspec-expectations (3.2.1)
@@ -236,6 +238,7 @@ DEPENDENCIES
   furatto
   jquery-rails
   rails (= 4.2.1)
+  rspec-collection_matchers
   rspec-rails
   sabisu_rails!
   sass-rails (~> 5.0)
