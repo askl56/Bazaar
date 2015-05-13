@@ -2,6 +2,12 @@ require 'rails_helper'
 
 class Authentication
   include Authenticable
+
+  def request
+  end
+
+  def render(args)
+  end
 end
 
 describe Authenticable do
@@ -23,16 +29,12 @@ describe Authenticable do
     before do
       @user = FactoryGirl.create :user
       authentication.stub(:current_user).and_return(nil)
-      response.stub(:response_code).and_return(401)
-      response.stub(:body).and_return({"errors" => "Not authenticated"}.to_json)
-      authentication.stub(:response).and_return(response)
     end
 
     it "render a json error message" do
-      expect(json_response[:errors]).to eql "Not authenticated"
+      expect(authentication).to receive(:render).with(json: { errors: "Not authenticated" }, status: :unauthorized)
+      authentication.authenticate_with_token!
     end
-
-    it {  should respond_with 401 }
   end
 
   describe "#user_signed_in?" do
