@@ -9,6 +9,7 @@ BazaarApi::Application.routes.draw do
       # We are going to list our resources here
       resources :users, :only => [:show, :create, :update, :destroy] do
         resources :products, :only => [:create, :update, :destroy]
+        resources :orders, :only => [:index, :show]
       end
       resources :sessions, :only => [:create, :destroy]
       resources :products, :only => [:show, :index]
