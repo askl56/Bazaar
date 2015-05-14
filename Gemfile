@@ -13,6 +13,7 @@ gem 'rspec-collection_matchers'
 gem 'kaminari'
 gem 'delayed_job_active_record'
 gem 'regressor', '~> 0.4.2'
+gem 'ember-rails'
 
 # Sabisu Gems
 gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
