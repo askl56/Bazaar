@@ -7,6 +7,14 @@ GIT
       activemodel (~> 4.0)
       httparty (~> 0.13)
 
+GIT
+  remote: git://github.com/ghempton/ember-script-rails.git
+  revision: 9a1f09b0c53bf51c37c35490cc76cd7dfe461234
+  specs:
+    ember_script-rails (0.0.3)
+      ember_script (>= 0.0.4)
+      rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -113,6 +121,11 @@ GEM
       jquery-rails (>= 1.0.17)
       railties (>= 3.1)
     ember-source (1.12.0)
+    ember_script (0.0.5)
+      ember_script-source (>= 0.0.2)
+      execjs
+      tilt
+    ember_script-source (0.0.14)
     erubis (2.7.0)
     execjs (2.5.2)
     factory_girl (4.5.0)
@@ -120,6 +133,8 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     ffaker (2.0.0)
     ffi (1.9.8)
     font-awesome-rails (4.3.0.0)
@@ -190,6 +205,11 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rdoc (4.2.0)
+    regressor (0.4.2)
+      faker (~> 1.3)
+      rails (~> 4.0)
+      rspec-rails (~> 3.0)
+      shoulda-matchers (~> 2.7.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     rspec-collection_matchers (1.1.2)
@@ -221,7 +241,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    shoulda-matchers (2.8.0)
+    shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
     simple_form (3.1.0)
       actionpack (~> 4.0)
@@ -265,6 +285,8 @@ DEPENDENCIES
   devise
   email_spec
   ember-rails
+  ember-source
+  ember_script-rails!
   factory_girl_rails
   ffaker
   font-awesome-rails
@@ -272,6 +294,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   rails (= 4.2.1)
+  regressor (~> 0.4.2)
   rspec-collection_matchers
   rspec-rails
   sabisu_rails!

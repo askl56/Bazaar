@@ -13,7 +13,11 @@ gem 'rspec-collection_matchers'
 gem 'kaminari'
 gem 'delayed_job_active_record'
 gem 'regressor', '~> 0.4.2'
+
+# Ember/FrontEnd
 gem 'ember-rails'
+gem 'ember-source'
+gem 'ember_script-rails', :github => 'ghempton/ember-script-rails'
 
 
 # Sabisu Gems
@@ -22,6 +26,7 @@ gem 'compass-rails'
 gem 'furatto'
 gem 'font-awesome-rails'
 gem 'simple_form'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
