@@ -12,11 +12,9 @@ gem 'devise'
 gem 'rspec-collection_matchers'
 gem 'kaminari'
 gem 'delayed_job_active_record'
-<<<<<<< HEAD
 gem 'regressor', '~> 0.4.2'
 gem 'ember-rails'
-=======
->>>>>>> parent of fa41c46... added regression
+
 
 # Sabisu Gems
 gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
