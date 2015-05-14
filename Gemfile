@@ -11,6 +11,7 @@ gem 'active_model_serializers', '0.8.3'
 gem 'devise'
 gem 'rspec-collection_matchers'
 gem 'kaminari'
+gem 'delayed_job_active_record'
 
 # Sabisu Gems
 gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
