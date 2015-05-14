@@ -52,8 +52,8 @@ describe Api::V1::OrdersController, type: :controller do
       current_user = FactoryGirl.create :user
       api_authorization_header current_user.auth_token
 
-      product_1 = FactoryGirl.create :product
-      product_2 = FactoryGirl.create :product
+      product_1 = FactoryGirl.create :product, quantity: 2
+      product_2 = FactoryGirl.create :product, quantity: 3
       order_params = { product_ids_and_quantities: [[product_1.id, 2],[ product_2.id, 3]] }
       post :create, user_id: current_user.id, order: order_params
     end
