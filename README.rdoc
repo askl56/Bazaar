@@ -1,4 +1,4 @@
-== Bazaar
+== Bazaar {<img src="https://travis-ci.org/askl56/Bazaar.svg" alt="Build Status" />}[https://travis-ci.org/askl56/Bazaar]
 
 A Rails Marketplace API
 
