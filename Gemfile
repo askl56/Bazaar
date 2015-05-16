@@ -38,4 +38,9 @@ group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'email_spec'
+  gem 'fuubar'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'rspec-api_helpers', github: 'kollegorna/rspec-api_helpers'
 end
