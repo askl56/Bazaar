@@ -12,13 +12,7 @@ gem 'devise'
 gem 'rspec-collection_matchers'
 gem 'kaminari'
 gem 'delayed_job_active_record'
-gem 'regressor', '~> 0.4.2'
-
-# Ember/FrontEnd
-gem 'ember-rails'
-gem 'ember-source'
-gem 'ember_script-rails', :github => 'ghempton/ember-script-rails'
-
+gem 'regressor', git: 'https://github.com/ndea/regressor.git', branch: 'master'
 
 # Sabisu Gems
 gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
