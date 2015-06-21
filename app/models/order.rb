@@ -2,7 +2,7 @@ class Order < ActiveRecord::Base
   belongs_to :user
 
   validates :total, presence: true,
-    numericality: { greater_than_or_equal_to: 0 }
+                    numericality: { greater_than_or_equal_to: 0 }
   validates :user_id, presence: true
   validates_with EnoughProductsValidator
 
@@ -15,7 +15,6 @@ class Order < ActiveRecord::Base
     self.total = 0
     placements.each do |placement|
       self.total += placement.product.price * placement.quantity
-
     end
   end
 
@@ -23,7 +22,7 @@ class Order < ActiveRecord::Base
     product_ids_and_quantities.each do |product_id_and_quantity|
       id, quantity = product_id_and_quantity
 
-      self.placements.build(product_id: id, quantity: quantity)
+      placements.build(product_id: id, quantity: quantity)
     end
   end
 end

@@ -1,15 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Product, regressor: true do
-
   # === Relations ===
   it { is_expected.to belong_to :user }
-  
+
   it { is_expected.to have_many :placements }
   it { is_expected.to have_many :orders }
 
   # === Nested Attributes ===
-  
 
   # === Database (Columns) ===
   it { is_expected.to have_db_column :id }
@@ -22,10 +20,9 @@ RSpec.describe Product, regressor: true do
   it { is_expected.to have_db_column :quantity }
 
   # === Database (Indexes) ===
-  it { is_expected.to have_db_index ["user_id"] }
+  it { is_expected.to have_db_index ['user_id'] }
 
   # === Validations (Length) ===
-  
 
   # === Validations (Presence) ===
   it { is_expected.to validate_presence_of :title }
@@ -36,8 +33,5 @@ RSpec.describe Product, regressor: true do
   it { is_expected.to validate_numericality_of(:price).is_greater_than_or_equal_to(0) }
   it { is_expected.not_to validate_numericality_of(:price).is_greater_than_or_equal_to(-1) }
 
-  
   # === Enums ===
-  
-  
 end

@@ -1,15 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe User, regressor: true do
-
   # === Relations ===
-
 
   it { is_expected.to have_many :products }
   it { is_expected.to have_many :orders }
 
   # === Nested Attributes ===
-
 
   # === Database (Columns) ===
   it { is_expected.to have_db_column :id }
@@ -28,9 +25,9 @@ RSpec.describe User, regressor: true do
   it { is_expected.to have_db_column :auth_token }
 
   # === Database (Indexes) ===
-  it { is_expected.to have_db_index ["auth_token"] }
-  it { is_expected.to have_db_index ["reset_password_token"] }
-  it { is_expected.to have_db_index ["email"] }
+  it { is_expected.to have_db_index ['auth_token'] }
+  it { is_expected.to have_db_index ['reset_password_token'] }
+  it { is_expected.to have_db_index ['email'] }
 
   # === Validations (Length) ===
   it { is_expected.to allow_value(FFaker::Lorem.characters(8)).for :password }
@@ -44,9 +41,5 @@ RSpec.describe User, regressor: true do
 
   # === Validations (Numericality) ===
 
-
-
   # === Enums ===
-
-
 end

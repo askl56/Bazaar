@@ -1,14 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Delayed::Backend::ActiveRecord::Job, regressor: true do
-
   # === Relations ===
-  
-  
-  
 
   # === Nested Attributes ===
-  
 
   # === Database (Columns) ===
   it { is_expected.to have_db_column :id }
@@ -25,19 +20,12 @@ RSpec.describe Delayed::Backend::ActiveRecord::Job, regressor: true do
   it { is_expected.to have_db_column :updated_at }
 
   # === Database (Indexes) ===
-  
 
   # === Validations (Length) ===
-  
 
   # === Validations (Presence) ===
-  
 
   # === Validations (Numericality) ===
-  
 
-  
   # === Enums ===
-  
-  
 end

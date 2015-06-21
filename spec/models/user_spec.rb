@@ -7,7 +7,7 @@ describe User, type: :model do
 
   it { should respond_to(:email) }
   it { should respond_to(:password) }
-  it { should respond_to(:password_confirmation)}
+  it { should respond_to(:password_confirmation) }
   it { should respond_to(:auth_token) }
 
   it { should validate_presence_of(:email) }
@@ -19,27 +19,27 @@ describe User, type: :model do
   it { should have_many(:products) }
   it { should have_many(:orders) }
 
-  describe "#generate_authentication_token!" do
-    it "generates a unique token" do
-      Devise.stub(:friendly_token).and_return("auniquetoken123")
+  describe '#generate_authentication_token!' do
+    it 'generates a unique token' do
+      Devise.stub(:friendly_token).and_return('auniquetoken123')
       @user.generate_authentication_token!
-      expect(@user.auth_token).to eql "auniquetoken123"
+      expect(@user.auth_token).to eql 'auniquetoken123'
     end
 
-    it "genearate another token when one has already been taken" do
-      existing_user = FactoryGirl.create(:user, auth_token: "auniquetoken123")
+    it 'genearate another token when one has already been taken' do
+      existing_user = FactoryGirl.create(:user, auth_token: 'auniquetoken123')
       @user.generate_authentication_token!
       expect(@user.auth_token).not_to eql existing_user.auth_token
     end
   end
 
-  describe "#products association" do
+  describe '#products association' do
     before do
       @user.save
       3.times { FactoryGirl.create :product, user: @user }
     end
 
-    it "destroys the associated products on self destruct" do
+    it 'destroys the associated products on self destruct' do
       products = @user.products
       @user.destroy
       products.each do |product|

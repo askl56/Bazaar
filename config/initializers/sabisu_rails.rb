@@ -1,7 +1,6 @@
 # Use this module to configure the sabisu available options
 
 SabisuRails.setup do |config|
-
   # Base uri for posting the
   config.base_api_uri = 'api.bazaarapi.dev'
 
@@ -14,7 +13,7 @@ SabisuRails.setup do |config|
   # Headers to include on each request
   #
   # You can configure the api headers fairly easy by just adding the correct headers
-  config.api_headers = { "Accept" => "application/vnd.bazaar.v1" }
+  config.api_headers = { 'Accept' => 'application/vnd.bazaar.v1' }
   #
   # config.api_headers = {}
 
@@ -36,5 +35,4 @@ SabisuRails.setup do |config|
 
   # mattr_accessor :authentication_password
   # @@authentication_password = "sekret"
-
 end

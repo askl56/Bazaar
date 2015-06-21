@@ -16,7 +16,7 @@ gem 'regressor', git: 'https://github.com/ndea/regressor.git', branch: 'master'
 gem 'rubocop'
 
 # Sabisu Gems
-gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
+gem 'sabisu_rails', github: 'IcaliaLabs/sabisu-rails'
 gem 'compass-rails'
 gem 'furatto'
 gem 'font-awesome-rails'

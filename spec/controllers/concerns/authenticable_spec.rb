@@ -6,7 +6,7 @@ class Authentication
   def request
   end
 
-  def render(args)
+  def render(_args)
   end
 end
 
@@ -14,30 +14,30 @@ describe Authenticable do
   let(:authentication) { Authentication.new }
   subject { authentication }
 
-  describe "#current_user" do
+  describe '#current_user' do
     before do
       @user = FactoryGirl.create :user
-      request.headers["Authorization"] = @user.auth_token
+      request.headers['Authorization'] = @user.auth_token
       authentication.stub(:request).and_return(request)
     end
-    it "returns the user from the authorization header" do
+    it 'returns the user from the authorization header' do
       expect(authentication.current_user.auth_token).to eql @user.auth_token
     end
   end
 
-  describe "#authenticate_with_token" do
+  describe '#authenticate_with_token' do
     before do
       @user = FactoryGirl.create :user
       authentication.stub(:current_user).and_return(nil)
     end
 
-    it "render a json error message" do
-      expect(authentication).to receive(:render).with(json: { errors: "Not authenticated" }, status: :unauthorized)
+    it 'render a json error message' do
+      expect(authentication).to receive(:render).with(json: { errors: 'Not authenticated' }, status: :unauthorized)
       authentication.authenticate_with_token!
     end
   end
 
-  describe "#user_signed_in?" do
+  describe '#user_signed_in?' do
     context "when there is a user on 'session'" do
       before do
         @user = FactoryGirl.create :user
