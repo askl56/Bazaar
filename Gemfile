@@ -13,6 +13,7 @@ gem 'rspec-collection_matchers'
 gem 'kaminari'
 gem 'delayed_job_active_record'
 gem 'regressor', git: 'https://github.com/ndea/regressor.git', branch: 'master'
+gem 'rubocop'
 
 # Sabisu Gems
 gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
